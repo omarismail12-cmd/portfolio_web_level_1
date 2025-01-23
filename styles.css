@@ -1,0 +1,34 @@
+:root {
+    --primary-color: #4a76ee;
+    --text-color: #1a1c20;
+    --background-color: #eeeff1;
+    --white: #ffffff;
+    --gray: #666666;
+    --transition: all 0.3s ease;
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+/* Sections */
+section {
+    padding: 5rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  
+}
