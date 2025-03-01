@@ -16,7 +16,7 @@
 }
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior:smooth;
 }
 
 body {
@@ -27,7 +27,7 @@ body {
     margin:auto;
     width: 90%;
     max-width: 1200px;
-    text-align: justify;
+    text-align:left;
 }
 
 .header {
@@ -151,6 +151,118 @@ section {
     margin: 0.5em;
 }
 
+/* Projects Section */
+#projects {
+    text-align: center;
+    margin: 2rem;
+  }
+  
+  #projects h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  #projects p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Grid Container */
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    gap: 1.5rem;
+    padding: 0 1em;
+  }
+  
+  /* Project Card */
+  .project-card {
+    background-color: var(--background-color);
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition);
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Card Image */
+  .project-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  /* Card Content */
+  .project-card h3 {
+    font-size: 1.2rem;
+    margin: 1em;
+  }
+  
+  .project-card p {
+    font-size: 0.95rem;
+    color: #555;
+  }
+  
+  /* Tags */
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+   
+  }
+  
+  .tags span {
+    background-color: gainsboro;
+    color: var(--text-color);
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+    border-radius: var(--border-radius);
+    margin-left: 1em;
+  }
+  
+  /* Project Links */
+  .project-links {
+    display: flex;
+    
+    border-radius: var(--border-radius);
+  }
+  
+  .project-links a {
+    text-align: center;
+    padding: 1em;
+    text-decoration: none;
+    transition:var(--transition);
+    font-size: 0.9em;
+    color: var(--primary-color);
+  }
+  
+  .project-links a:hover {
+   color: var(--text-color);
+  }
+
+  #Testimony h2 {
+    text-align: center;
+    font-size: 2.4em;
+  }
+
+  .img-testimony img {
+    width: 15em;
+  height: 15em;
+  border-radius: 100%;
+
+  }
+
+
+ 
+  
 /* Responsive Design */
 @media (max-width: 768px) {
   
