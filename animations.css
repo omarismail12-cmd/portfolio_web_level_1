@@ -1,4 +1,6 @@
-/* Fade In Animation */
+/* Animations CSS File */
+
+/* Keyframes Definitions */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -10,8 +12,326 @@
   }
 }
 
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+  60% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 /* Animation Class */
 .fade-in {
   animation: fadeIn 0.6s ease forwards;
+}
+
+.header {
+  animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.logo {
+  animation: slideInLeft 0.8s ease-out 0.2s forwards;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+.nav ul li {
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+.nav ul li:nth-child(1) {
+  animation: slideInRight 0.5s ease-out 0.3s forwards;
+}
+
+.nav ul li:nth-child(2) {
+  animation: slideInRight 0.5s ease-out 0.5s forwards;
+}
+
+.nav ul li:nth-child(3) {
+  animation: slideInRight 0.5s ease-out 0.7s forwards;
+}
+
+/* Hero section animations */
+.hero-content h1 {
+  animation: slideInLeft 0.8s ease-out 0.5s forwards;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+.hero-content p {
+  animation: slideInLeft 0.8s ease-out 0.7s forwards;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+.hero-buttons {
+  animation: slideInLeft 0.8s ease-out 0.9s forwards;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+.hero-image {
+  animation: scaleIn 1s ease-out 0.8s forwards;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+.hero-image img {
+  animation: float 6s ease-in-out infinite;
+}
+
+.wave {
+  display: inline-block;
+  animation: wave 2.5s infinite;
+  transform-origin: 70% 70%;
+}
+
+/* Button animations */
+.btn {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.1);
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: all 0.5s ease;
+}
+
+.btn:hover::after {
+  left: 100%;
+}
+
+.email-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.1);
+}
+
+/* Section animations */
+.skills-section h2,
+.projects-section h2,
+.testimony-section h2,
+.contact-section h2 {
+  animation: fadeIn 0.8s ease-out forwards;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+.skills-section p,
+.projects-section > p,
+.contact-section > p {
+  animation: fadeIn 0.8s ease-out 0.2s forwards;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+/* Skill cards animations */
+.skill-card {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-out forwards;
+  animation-fill-mode: forwards;
+}
+
+.skills-container .skill-card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.skills-container .skill-card:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.skills-container .skill-card:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+.skills-container .skill-card:nth-child(4) {
+  animation-delay: 0.5s;
+}
+
+.skills-container .skill-card:nth-child(5) {
+  animation-delay: 0.6s;
+}
+
+.skill-card:hover {
+  animation: pulse 2s infinite;
+}
+
+/* Project cards animations */
+.project-card {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-out forwards;
+  animation-fill-mode: forwards;
+}
+
+.project-grid .project-card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.project-grid .project-card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.project-grid .project-card:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.project-grid .project-card:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+/* Testimony animations */
+.testimony-image {
+  animation: fadeIn 0.8s ease-out 0.3s forwards;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+.testimony-content {
+  animation: fadeIn 0.8s ease-out 0.5s forwards;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+/* Contact form animations */
+.contact-info {
+  animation: slideInLeft 0.8s ease-out 0.3s forwards;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+.contact-form {
+  animation: slideInRight 0.8s ease-out 0.5s forwards;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+.form-group {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-out forwards;
+  animation-fill-mode: forwards;
+}
+
+.contact-form .form-group:nth-child(1) {
+  animation-delay: 0.6s;
+}
+
+.contact-form .form-group:nth-child(2) {
+  animation-delay: 0.7s;
+}
+
+.contact-form .form-group:nth-child(3) {
+  animation-delay: 0.8s;
+}
+
+.contact-form .form-group:nth-child(4) {
+  animation-delay: 0.9s;
+}
+
+.submit-btn {
+  animation: fadeIn 0.5s ease-out 1s forwards;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+/* Footer animation */
+.footer {
+  animation: fadeIn 1s ease-out 1s forwards;
+  opacity: 0;
+  animation-fill-mode: forwards;
+}
+
+/* Scroll animations */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
 } 
 

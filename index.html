@@ -1,228 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional portfolio website showcasing skills and projects">
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="animations.css">
-    
-    <!-- EmailJS -->
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    
-    <!-- International Phone Input -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css">
-    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
-    
-    <title>Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Professional portfolio website showcasing skills and projects" />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="animations.css" />
+  
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  
+  <!-- International Phone Input -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css" />
+  <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
+  
+  <title>Portfolio</title>
 </head>
 <body>
-    <!-- Header Section -->
-    <header class="header">
-        <h1 class="logo"> Omar Ismail</h1>
-        <nav class="nav">
-            <ul>
-                
-            <!-- Navigation links will be added here -->
-           <li><a href="https://github.com/omarismail12-cmd "target="_blank"> <span><svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 20">
-            <path fill="currentColor" d="M12 1A10.89 10.89 0 0 0 1 11.77A10.79 10.79 0 0 0 8.52 22c.55.1.75-.23.75-.52v-1.83c-3.06.65-3.71-1.44-3.71-1.44a2.86 2.86 0 0 0-1.22-1.58c-1-.66.08-.65.08-.65a2.31 2.31 0 0 1 1.68 1.11a2.37 2.37 0 0 0 3.2.89a2.33 2.33 0 0 1 .7-1.44c-2.44-.27-5-1.19-5-5.32a4.15 4.15 0 0 1 1.11-2.91a3.78 3.78 0 0 1 .11-2.84s.93-.29 3 1.1a10.7 10.7 0 0 1 5.5 0c2.1-1.39 3-1.1 3-1.1a3.78 3.78 0 0 1 .11 2.84A4.15 4.15 0 0 1 19 11.2c0 4.14-2.58 5.05-5 5.32a2.5 2.5 0 0 1 .75 2v2.95c0 .35.2.63.75.52A10.8 10.8 0 0 0 23 11.77A10.89 10.89 0 0 0 12 1" />
-        </svg></span> GitHub</a></li> 
-           <li><a href="https://www.linkedin.com/in/omar-ismail-348820353/" target="_blank" > <span><svg xmlns="http://www.w3.org/2000/svg" width="1.05em" height="1.2em" viewBox="0 0 500 350">
-            <path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5c0 21.3-17.2 38.5-38.5 38.5m282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7c-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5c67.2 0 79.7 44.3 79.7 101.9z" />
-        </svg></span> LinkedIn</a></li>
-           <li><a href="mailto:omarismail3939@gmail.com?subject=Hello&body=How are you?" class="active" rel="noopener noreferrer"> <span><svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.2em" viewBox="0 0 30 13">
-            <path fill="currentColor" d="m20 8l-8 5l-8-5V6l8 5l8-5m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2" />
-        </svg></span> Email </a></li>
-           </ul>
-        </nav>
-    </header>
+  <!-- Header Section -->
+  <header class="header">
+      <h1 class="logo">Omar Ismail</h1>
+      <nav class="nav">
+          <ul>
+              <!-- Navigation links will be added here -->
+              <li><a href="https://github.com/omarismail12-cmd" target="_blank">
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 20">
+                      <path fill="currentColor" d="M12 1A10.89 10.89 0 0 0 1 11.77A10.79 10.79 0 0 0 8.52 22c.55.1.75-.23.75-.52v-1.83c-3.06.65-3.71-1.44-3.71-1.44a2.86 2.86 0 0 0-1.22-1.58c-1-.66.08-.65.08-.65a2.31 2.31 0 0 1 1.68 1.11a2.37 2.37 0 0 0 3.2.89a2.33 2.33 0 0 1 .7-1.44c-2.44-.27-5-1.19-5-5.32a4.15 4.15 0 0 1 1.11-2.91a3.78 3.78 0 0 1 .11-2.84s.93-.29 3 1.1a10.7 10.7 0 0 1 5.5 0c2.1-1.39 3-1.1 3-1.1a3.78 3.78 0 0 1 .11 2.84A4.15 4.15 0 0 1 19 11.2c0 4.14-2.58 5.05-5 5.32a2.5 2.5 0 0 1 .75 2v2.95c0 .35.2.63.75.52A10.8 10.8 0 0 0 23 11.77A10.89 10.89 0 0 0 12 1" />
+                    </svg>
+                  </span> GitHub</a></li> 
+              <li><a href="https://www.linkedin.com/in/omar-ismail-348820353/" target="_blank">
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1.05em" height="1.2em" viewBox="0 0 500 350">
+                      <path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5c0 21.3-17.2 38.5-38.5 38.5m282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7c-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5c67.2 0 79.7 44.3 79.7 101.9z" />
+                    </svg>
+                  </span> LinkedIn</a></li>
+              <li><a href="mailto:omarismail3939@gmail.com?subject=Hello&body=How are you?" class="active" rel="noopener noreferrer">
+                  <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1.5em" height="1.2em" viewBox="0 0 30 13">
+                      <path fill="currentColor" d="m20 8l-8 5l-8-5V6l8 5l8-5m0-2H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2" />
+                    </svg>
+                  </span> Email</a></li>
+          </ul>
+      </nav>
+  </header>
 
-    <!-- Main Content -->
-    <main>
-        <!-- Hero Section -->
-        <section id="home" class="hero-section">
-            <!-- Hero content will be added here -->
-            <div class="hero-content">
-                <h1>Hi, I'm John <span class="wave">👋</span></h1>
-                <p>
-                lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ipsam assumenda est perspiciatis labore quasi,
-                iure dignissimos, libero omnis sint necessitatibus ad. Hic expedita eligendi tenetur quisquam id quaerat alias
-                cumque, autem voluptatem in iure ut laudantium tempora cupiditate voluptate est nemo impedit, quidem iusto,
-                provident aperiam, Iste,repellat aperiam!
-                </p>
-                <div class="hero-buttons">
-                 <a href="#skills" class="btn"> <span><svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 16">
-                    <g fill="none">
-                        <path d="M0 0h24v24H0z" />
-                        <path fill="currentColor" d="M14.486 3.143a1 1 0 0 1 .692 1.233l-4.43 15.788a1 1 0 0 1-1.926-.54l4.43-15.788a1 1 0 0 1 1.234-.693M7.207 7.05a1 1 0 0 1 0 1.414L3.672 12l3.535 3.535a1 1 0 1 1-1.414 1.415L1.55 12.707a1 1 0 0 1 0-1.414L5.793 7.05a1 1 0 0 1 1.414 0m9.586 1.414a1 1 0 1 1 1.414-1.414l4.243 4.243a1 1 0 0 1 0 1.414l-4.243 4.243a1 1 0 0 1-1.414-1.415L20.328 12z" />
-                    </g>
-                </svg></span> Skills</a>
-                 <a href="#Testimony" class="btn"> <span><svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 16">
-                    <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497zM15 5l4 4" />
-                </svg></span> Testimony</a>
-                 <a href="#contact" class="btn"> <span><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="0.8em" viewBox="0 0 20 20">
-                    <path fill="currentColor" d="M0 8v8a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-10 4z" />
-                    <path fill="currentColor" d="M2 2a2 2 0 0 0-2 2v2l10 4l10-4V4a2 2 0 0 0-2-2z" />
-                </svg></span> Contact</a>
-               
-                </div>
+  <!-- Main Content -->
+  <main>
+      <!-- Hero Section -->
+      <section id="home" class="hero-section">
+          <div class="hero-content">
+              <h1>Hi, I'm Omar <span class="wave">👋</span></h1>
+              <p>
+                  lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ipsam assumenda est perspiciatis labore quasi,
+                  iure dignissimos, libero omnis sint necessitatibus ad. Hic expedita eligendi tenetur quisquam id quaerat alias
+                  cumque, autem voluptatem in iure ut laudantium tempora cupiditate voluptate est nemo impedit, quidem iusto,
+                  provident aperiam, Iste, repellat aperiam!
+              </p>
+              <div class="hero-buttons">
+                  <a href="#skills" class="btn">
+                      <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 16">
+                          <g fill="none">
+                              <path d="M0 0h24v24H0z" />
+                              <path fill="currentColor" d="M14.486 3.143a1 1 0 0 1 .692 1.233l-4.43 15.788a1 1 0 0 1-1.926-.54l4.43-15.788a1 1 0 0 1 1.234-.693M7.207 7.05a1 1 0 0 1 0 1.414L3.672 12l3.535 3.535a1 1 0 1 1-1.414 1.415L1.55 12.707a1 1 0 0 1 0-1.414L5.793 7.05a1 1 0 0 1 1.414 0" />
+                          </g>
+                        </svg>
+                      </span> Skills
+                  </a>
+                  <a href="#Testimony" class="btn">
+                      <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 24 16">
+                          <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497zM15 5l4 4" />
+                        </svg>
+                      </span> Testimony
+                  </a>
+                  <a href="#contact" class="btn">
+                      <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="0.8em" viewBox="0 0 20 20">
+                          <path fill="currentColor" d="M0 8v8a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-10 4z" />
+                          <path fill="currentColor" d="M2 2a2 2 0 0 0-2 2v2l10 4l10-4V4a2 2 0 0 0-2-2z" />
+                        </svg>
+                      </span> Contact
+                  </a>
               </div>
-              <span class="hero-image">
-                <!-- Replace with an actual image or avatar if you have one -->
-                <img src="images/hero-headshot.webp" alt="John Photo" />
-              </span>
-        </section>
+          </div>
+          <span class="hero-image">
+              <img src="images/hero-headshot.webp" alt="John Photo" />
+          </span>
+      </section>
 
-        <!-- Skills Section -->
-        <section id="skills" class="skills-section">
-            <!-- Skills content will be dynamically added -->
-             <h2>Skills</h2>
-             <p>lorem,ipsum dolor sit amet consectetur adipiscing elit. Voluptates, perspiciatis iure distinctio quidem aperiam necessitatibus omnis possimus excepturi amet
-                 quos retum? Perferendis repellat natus saepe quoerat quibusdam neque recusandae optio?</p>
-                <div class="btn-skills">
-                    <button><span><img src="images/html-logo.webp" alt="html-logo"></span>Html</button>
-                    <button><span><img src="images/css-logo.webp" alt="css-logo"></span>Css</button>
-                    <button><span><img src="images/javascript-logo.webp" alt="javascript-logo"></span>JavaScript</button>
-                    <button><span><img src="images/node-logo.webp" alt="node-logo"></span>Node.js</button>
-                    <button><span><img src="images/react-logo.webp" alt="react-logo"></span>React</button>
-                </div>
-        </section>
+      <!-- Skills Section -->
+      <section id="skills" class="skills-section">
+          <h2>Skills</h2>
+          <p>
+              lorem,ipsum dolor sit amet consectetur adipiscing elit. Voluptates, perspiciatis iure distinctio quidem aperiam necessitatibus omnis possimus excepturi amet
+              quos retum? Perferendis repellat natus saepe quoerat quibusdam neque recusandae optio?
+          </p>
+          <div class="btn-skills">
+              <button><span><img src="images/html-logo.webp" alt="html-logo" /></span>Html</button>
+              <button><span><img src="images/css-logo.webp" alt="css-logo" /></span>Css</button>
+              <button><span><img src="images/javascript-logo.webp" alt="javascript-logo" /></span>JavaScript</button>
+              <button><span><img src="images/node-logo.webp" alt="node-logo" /></span>Node.js</button>
+              <button><span><img src="images/react-logo.webp" alt="react-logo" /></span>React</button>
+          </div>
+      </section>
 
-        <!-- Projects Section -->
-        <section id="projects" class="projects-section">
-            <!-- Projects will be dynamically added -->
-           <h2>Projects</h2>
-           <p>Here are some of my recent projects that showcase my skills and experience.</p>
-    
-    <div class="project-grid">
-      <!-- Card 1 -->
-      <div class="project-card">
-        <img src="https://freebox.cdn.scw.iliad.fr/Netflix_placeholder_BA_5e22e60d99.jpg" alt="Netflix Clone Screenshot" />
-        <h3>Netflix Clone</h3>
-        <p>
-          A full-stack Netflix clone with user authentication, 
-          video streaming features, and a modern responsive design.
-        </p>
-        <div class="tags">
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>JavaScript</span>
-        </div>
-        <div class="project-links">
-          <a href="#" target="_blank"><span><svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="1 0 24 20">
-            <path fill="currentColor" d="M12 1A10.89 10.89 0 0 0 1 11.77A10.79 10.79 0 0 0 8.52 22c.55.1.75-.23.75-.52v-1.83c-3.06.65-3.71-1.44-3.71-1.44a2.86 2.86 0 0 0-1.22-1.58c-1-.66.08-.65.08-.65a2.31 2.31 0 0 1 1.68 1.11a2.37 2.37 0 0 0 3.2.89a2.33 2.33 0 0 1 .7-1.44c-2.44-.27-5-1.19-5-5.32a4.15 4.15 0 0 1 1.11-2.91a3.78 3.78 0 0 1 .11-2.84s.93-.29 3 1.1a10.7 10.7 0 0 1 5.5 0c2.1-1.39 3-1.1 3-1.1a3.78 3.78 0 0 1 .11 2.84A4.15 4.15 0 0 1 19 11.2c0 4.14-2.58 5.05-5 5.32a2.5 2.5 0 0 1 .75 2v2.95c0 .35.2.63.75.52A10.8 10.8 0 0 0 23 11.77A10.89 10.89 0 0 0 12 1" />
-        </svg></span> Code</a>
-          <a href="#" target="_blank"><span><svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 16 16">
-            <g fill="currentColor" fill-rule="evenodd">
-                <path d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
-                <path d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" />
-            </g>
-        </svg></span> Live Demo</a>
-        </div>
-      </div>
+      <!-- Projects Section (Dynamic Rendering) -->
+      <section id="projects" class="projects-section">
+        <h2>Projects</h2>
+        <p>Here are some of my recent projects that showcase my skills and experience.</p>
+        
+        <!-- Empty container for project cards -->
+        <div class="project-grid" id="projects-grid"></div>
+      </section>
+      
 
-      <!-- Card 2 -->
-      <div class="project-card">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDNCIOxAnCNPWONYtUVZh41rH5TD0ux4Ik_w&s" alt="Chat App Screenshot" />
-        <h3>Real-time Chat Application</h3>
-        <p>
-          A real-time chat application with group and private messaging,
-          typing indicators, and message notifications.
-        </p>
-        <div class="tags">
-          <span>React</span>
-          <span>Node.js</span>
-          <span>Socket.io</span>
-        </div>
-        <div class="project-links">
-          <a href="#" target="_blank"><span><svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="1 0 24 20">
-            <path fill="currentColor" d="M12 1A10.89 10.89 0 0 0 1 11.77A10.79 10.79 0 0 0 8.52 22c.55.1.75-.23.75-.52v-1.83c-3.06.65-3.71-1.44-3.71-1.44a2.86 2.86 0 0 0-1.22-1.58c-1-.66.08-.65.08-.65a2.31 2.31 0 0 1 1.68 1.11a2.37 2.37 0 0 0 3.2.89a2.33 2.33 0 0 1 .7-1.44c-2.44-.27-5-1.19-5-5.32a4.15 4.15 0 0 1 1.11-2.91a3.78 3.78 0 0 1 .11-2.84s.93-.29 3 1.1a10.7 10.7 0 0 1 5.5 0c2.1-1.39 3-1.1 3-1.1a3.78 3.78 0 0 1 .11 2.84A4.15 4.15 0 0 1 19 11.2c0 4.14-2.58 5.05-5 5.32a2.5 2.5 0 0 1 .75 2v2.95c0 .35.2.63.75.52A10.8 10.8 0 0 0 23 11.77A10.89 10.89 0 0 0 12 1" />
-        </svg></span> Code</a>
-          <a href="#" target="_blank"><span><svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 16 16">
-            <g fill="currentColor" fill-rule="evenodd">
-                <path d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
-                <path d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" />
-            </g>
-        </svg></span>Live Demo</a>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="project-card">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9RCBYM74oMV4FiO92HNQ0YJG2o3l2S4GJRA&s" alt="E-commerce Screenshot" />
-        <h3>E-commerce Platform</h3>
-        <p>
-          A full-featured e-commerce platform with product catalog, 
-          shopping cart, and secure payment integration.
-        </p>
-        <div class="tags">
-          <span>HTML</span>
-          <span>CSS</span>
-          <span>JavaScript</span>
-          <span>Node.js</span>
-        </div>
-        <div class="project-links">
-          <a href="#" target="_blank"><span><svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="1 0 24 20">
-            <path fill="currentColor" d="M12 1A10.89 10.89 0 0 0 1 11.77A10.79 10.79 0 0 0 8.52 22c.55.1.75-.23.75-.52v-1.83c-3.06.65-3.71-1.44-3.71-1.44a2.86 2.86 0 0 0-1.22-1.58c-1-.66.08-.65.08-.65a2.31 2.31 0 0 1 1.68 1.11a2.37 2.37 0 0 0 3.2.89a2.33 2.33 0 0 1 .7-1.44c-2.44-.27-5-1.19-5-5.32a4.15 4.15 0 0 1 1.11-2.91a3.78 3.78 0 0 1 .11-2.84s.93-.29 3 1.1a10.7 10.7 0 0 1 5.5 0c2.1-1.39 3-1.1 3-1.1a3.78 3.78 0 0 1 .11 2.84A4.15 4.15 0 0 1 19 11.2c0 4.14-2.58 5.05-5 5.32a2.5 2.5 0 0 1 .75 2v2.95c0 .35.2.63.75.52A10.8 10.8 0 0 0 23 11.77A10.89 10.89 0 0 0 12 1" />
-        </svg></span> Code</a>
-          <a href="#" target="_blank"><span><svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 16 16">
-            <g fill="currentColor" fill-rule="evenodd">
-                <path d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
-                <path d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" />
-            </g>
-        </svg></span> Live Demo</a>
-        </div>
-      </div>
-
-      <!-- Card 4 -->
-      <div class="project-card">
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeqGH9Ccd0f-5EYtHuxCKhVGMzXeTCs0nLTQ&s" alt="Weather Dashboard Screenshot" />
-        <h3>Weather Dashboard</h3>
-        <p>
-          An interactive weather dashboard using a third-party API 
-          to display current weather conditions and forecasts.
-        </p>
-        <div class="tags">
-          <span>JavaScript</span>
-          <span>API</span>
-          <span>Bootstrap</span>
-        </div>
-        <div class="project-links">
-          <a href="#" target="_blank"><span><svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="1 0 24 20">
-            <path fill="currentColor" d="M12 1A10.89 10.89 0 0 0 1 11.77A10.79 10.79 0 0 0 8.52 22c.55.1.75-.23.75-.52v-1.83c-3.06.65-3.71-1.44-3.71-1.44a2.86 2.86 0 0 0-1.22-1.58c-1-.66.08-.65.08-.65a2.31 2.31 0 0 1 1.68 1.11a2.37 2.37 0 0 0 3.2.89a2.33 2.33 0 0 1 .7-1.44c-2.44-.27-5-1.19-5-5.32a4.15 4.15 0 0 1 1.11-2.91a3.78 3.78 0 0 1 .11-2.84s.93-.29 3 1.1a10.7 10.7 0 0 1 5.5 0c2.1-1.39 3-1.1 3-1.1a3.78 3.78 0 0 1 .11 2.84A4.15 4.15 0 0 1 19 11.2c0 4.14-2.58 5.05-5 5.32a2.5 2.5 0 0 1 .75 2v2.95c0 .35.2.63.75.52A10.8 10.8 0 0 0 23 11.77A10.89 10.89 0 0 0 12 1" />
-        </svg></span> Code</a>
-          <a href="#" target="_blank"><span><svg xmlns="http://www.w3.org/2000/svg" width="1.2em" height="1.2em" viewBox="0 0 16 16">
-            <g fill="currentColor" fill-rule="evenodd">
-                <path d="M8.636 3.5a.5.5 0 0 0-.5-.5H1.5A1.5 1.5 0 0 0 0 4.5v10A1.5 1.5 0 0 0 1.5 16h10a1.5 1.5 0 0 0 1.5-1.5V7.864a.5.5 0 0 0-1 0V14.5a.5.5 0 0 1-.5.5h-10a.5.5 0 0 1-.5-.5v-10a.5.5 0 0 1 .5-.5h6.636a.5.5 0 0 0 .5-.5" />
-                <path d="M16 .5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h3.793L6.146 9.146a.5.5 0 1 0 .708.708L15 1.707V5.5a.5.5 0 0 0 1 0z" />
-            </g>
-        </svg></span> Live Demo</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-        <!-- Testimonial Section -->
-        <section id="testimony" class="testimony-section">
+      <!-- Testimonial Section -->
+      <section id="testimony" class="testimony-section">
           <h2>Testimony</h2>
-          
           <div class="testimony-container">
               <div class="testimony-image">
-              <img src="images/testimony-headshot.webp" alt="John Doe">
+                  <img src="images/testimony-headshot.webp" alt="John Doe" />
                   <h3>John Doe</h3>
                   <p>Senior Developer</p>
               </div>
-              
               <div class="testimony-content">
                   <p>
                       "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor sint
@@ -234,59 +146,67 @@
               </div>
           </div>
       </section>
-      
 
-
-        <!-- Contact Section -->
-        <section id="contact" class="contact-section">
-          <h2>contact</h2>
+      <!-- Contact Section -->
+      <section id="contact" class="contact-section">
+          <h2 class="animate-on-scroll">Contact</h2>
+          <p class="animate-on-scroll">Feel free to reach out if you have any questions or would like to work together.</p>
           <div class="contact-container">
-            <p>Lorem upsum dolo sit, amet consectetur adipisicing elit. Repellat fugit maioresatque architecto saepe tenetur quasi reiciendis illum sint doloremque alias inventore, asperiores maxime pariatur totam hic assumenda repudiandae,uisto quisquam nisi! Eaque doloremque perspiciatis minus voluptate dicta. A ratione autem dolor iure libero numquam voluptatem nobis laborum et corporis.
-            </p>
-            <div class="contact-methods">
-             <div class="contact-method">
-               <i class="fas fa-envelope"></i>
-               <span>omarismail3939@gmail.com</span>
-             </div>
-             <div class="contact-method">
-               <i class="fas fa-map-marker-alt"></i>
-               <span> Tripoli,Lebanon</span>
-             </div>
-            </div>
-            <form id="contact-form">
-                <!-- Contact form will be added here -->
-                <div class="form-group">
-                  <label for="name">Name</label>
-                  <input type="text" id="name" name="name" required>
+              <div class="contact-info animate-on-scroll">
+                  <p>
+                      I'm always open to discussing new projects, creative ideas or opportunities to be part of your vision. 
+                      Use the form to get in touch, and I'll get back to you as soon as possible.
+                  </p>
+                  <div class="contact-methods">
+                      <div class="contact-method">
+                          <i class="fas fa-envelope"></i>
+                          <span>omarismail3939@gmail.com</span>
+                      </div>
+                      <div class="contact-method">
+                          <i class="fas fa-map-marker-alt"></i>
+                          <span>New York, USA</span>
+                      </div>
+                  </div>
               </div>
-              
-              <div class="form-group">
-                  <label for="email">Email</label>
-                  <input type="email" id="email" name="email" required>
-              </div>
-              
-              <div class="form-group">
-                  <label for="phone">Phone Number</label>
-                  <input type="tel" id="phone" name="phone">
-              </div>
-              
-              <div class="form-group">
-                  <label for="message">Message</label>
-                  <textarea id="message" name="message" rows="5" required></textarea>
-              </div>
-              
-              <button type="submit" class="submit-btn">Send Message</button>
-            </form>
+              <form id="contact-form" class="contact-form animate-on-scroll">
+                  <div class="form-group">
+                      <label for="name">Name</label>
+                      <input type="text" id="name" name="name" required />
+                      <small class="error-message" id="name-error"></small>
+                  </div>
+                  <div class="form-group">
+                      <label for="email">Email</label>
+                      <input type="email" id="email" name="email" required />
+                      <small class="error-message" id="email-error"></small>
+                  </div>
+                  <div class="form-group">
+                      <label for="phone">Phone Number</label>
+                      <input type="tel" id="phone" name="phone" />
+                      <small class="error-message" id="phone-error"></small>
+                  </div>
+                  <div class="form-group">
+                      <label for="message">Message</label>
+                      <textarea id="message" name="message" rows="5" required></textarea>
+                      <small class="error-message" id="message-error"></small>
+                  </div>
+                  <button type="submit" class="submit-btn" id="submit-btn">
+                      <span class="btn-text">Send Message</span>
+                      <span class="btn-loading" style="display: none;">
+                          <i class="fas fa-spinner fa-spin"></i> Sending...
+                      </span>
+                  </button>
+                  <div id="form-status" class="form-status"></div>
+              </form>
           </div>
-        </section>
-    </main>
+      </section>
+  </main>
 
-     <!-- Footer -->
-     <footer class="footer">
+  <!-- Footer -->
+  <footer class="footer">
       <p>&copy; 2025 Omar Ismail. All rights reserved.</p>
   </footer>
 
-    <!-- Custom JavaScript -->
-    <script src="script.js"></script>
+  <!-- Custom JavaScript -->
+  <script src="script.js"></script>
 </body>
 </html>
