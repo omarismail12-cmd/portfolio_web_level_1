@@ -483,9 +483,7 @@ section {
     gap: 1rem;
 }
 
-.skill-card {
-    width: 120px;
-}
+
 }
  
 @media (max-width: 576px) {
