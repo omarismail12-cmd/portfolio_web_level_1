@@ -213,23 +213,7 @@ section {
     font-size: 0.95rem;
     color: #555;
   }
-  
-  /* Tags */
-  .tags {
-    display: flex;
-    flex-wrap: wrap;
-   
-  }
-  
-  .tags span {
-    background-color: gainsboro;
-    color: var(--text-color);
-    font-size: 0.8rem;
-    padding: 0.3rem 0.6rem;
-    border-radius: var(--border-radius);
-    margin-left: 1em;
-  }
-  
+    
   /* Project Links */
   .project-links {
     display: flex;
