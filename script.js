@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const iti = window.intlTelInput(phoneInput, {
             utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/utils.js",
             separateDialCode: true,
-            dropdownContainer: document.body, // Moves dropdown outside the form
+            dropdownContainer: document.body, 
             geoIpLookup: function(callback) {
                 fetch("https://ipapi.co/json")
                     .then(response => response.json())
