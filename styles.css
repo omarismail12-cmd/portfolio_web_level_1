@@ -135,11 +135,11 @@ section {
     display: inline-flex;
     align-items: center;
     margin-top: 2em;
-   padding: 0.5em 4em;
+    padding: 0.5em 3.5em;
     background-color: var(--background-color);
     border: 1px solid gainsboro;
     border-radius: var(--border-radius);
-   margin: 1em;
+    margin: 1em;
 }
 
 .btn-skills button:hover {
@@ -233,15 +233,12 @@ section {
   /* Project Links */
   .project-links {
     display: flex;
-    
-    border-radius: var(--border-radius);
   }
   
   .project-links a {
     text-align: center;
     padding: 1em;
     text-decoration: none;
-    transition:var(--transition);
     font-size: 0.9em;
     color: var(--primary-color);
   }

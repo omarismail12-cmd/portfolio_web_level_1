@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     emailjs.init("dLZTj0d5O9tacoaWO");
 
       renderSkills();
-      
+
     // Skills Data
     function renderSkills() {
         const skillsData = [
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
     projectsGrid.innerHTML = projectsData.map(project => {
       return `
         <div class="project-card">
-          <img src="${project.image}" alt="${project.title} Screenshot" />
+          <img src="${project.image}" alt="${project.title} Screenshot "/>
           <h3>${project.title}</h3>
           <p>${project.description}</p>
           <div class="project-tags">
