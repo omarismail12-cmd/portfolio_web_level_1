@@ -1,20 +1,28 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // =========================
-    // Main Code
-    // =========================
-
     // Initialize EmailJS with your public key
     emailjs.init("dLZTj0d5O9tacoaWO");
 
+      renderSkills();
+      
     // Skills Data
-    const skillsData = [
-        { name: "HTML", image: "images/html-logo.webp" },
-        { name: "CSS", image: "images/css-logo.webp" },
-        { name: "JavaScript", image: "images/javascript-logo.webp" },
-        { name: "Node.js", image: "images/node-logo.webp" },
-        { name: "React.js", image: "images/react-logo.webp" }
-    ];
-
+    function renderSkills() {
+        const skillsData = [
+          { name: "HTML", image: "images/html-logo.webp" },
+          { name: "CSS", image: "images/css-logo.webp" },
+          { name: "JavaScript", image: "images/javascript-logo.webp" },
+          { name: "Node.js", image: "images/node-logo.webp" },
+          { name: "React.js", image: "images/react-logo.webp" }
+        ];
+        const skillsContainer = document.querySelector('.btn-skills');
+        if (skillsContainer) {
+          skillsContainer.innerHTML = skillsData.map(skill => `
+            <button>
+              <span><img src="${skill.image}" alt="${skill.name} logo" /></span>
+              ${skill.name}
+            </button>
+          `).join('');
+        }
+      }
     // Projects Data
     const projectsData = [
         {
@@ -86,18 +94,13 @@ document.addEventListener('DOMContentLoaded', function() {
       `;
     }).join('');
     
-
-    // =========================
-    // Enhanced Code
-    // =========================
-
     // Initialize international phone input with advanced options
     const phoneInput = document.getElementById('phone');
     if (phoneInput) {
         const iti = window.intlTelInput(phoneInput, {
             utilsScript: "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/utils.js",
             separateDialCode: true,
-            initialCountry: "auto",
+            dropdownContainer: document.body, // Moves dropdown outside the form
             geoIpLookup: function(callback) {
                 fetch("https://ipapi.co/json")
                     .then(response => response.json())
@@ -109,20 +112,7 @@ document.addEventListener('DOMContentLoaded', function() {
         window.phoneInputInstance = iti;
     }
 
-    // Add smooth scrolling for all links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop - 80, // Adjust for header height
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
+  
 
     // Add wave animation to the wave emoji
     const waveEmoji = document.querySelector('.wave');
@@ -136,10 +126,11 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Form validation functions
-    function validateEmail(email) {
-        const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-        return re.test(String(email).toLowerCase());
-    }
+ function validateEmail(email) {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(String(email).toLowerCase());
+}
+
 
     function validatePhone(phoneInputInstance) {
         if (!phoneInputInstance) return true;
@@ -306,46 +297,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Add active class to nav links based on scroll position
-    const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('.nav-link');
-
-    window.addEventListener('scroll', () => {
-        let current = '';
-
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            if (pageYOffset >= sectionTop - 100) {
-                current = section.getAttribute('id');
-            }
-        });
-
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === `#${current}`) {
-                link.classList.add('active');
-            }
-        });
-    });
-
-    // Scroll animations
-    const animateOnScrollElements = document.querySelectorAll('.animate-on-scroll');
-
-    // Initial check on page load
-    checkScroll();
-
-    // Check elements on scroll
-    window.addEventListener('scroll', checkScroll);
-
-    function checkScroll() {
-        const triggerBottom = window.innerHeight * 0.8;
-        animateOnScrollElements.forEach(element => {
-            const elementTop = element.getBoundingClientRect().top;
-            if (elementTop < triggerBottom) {
-                element.classList.add('visible');
-            }
-        });
-    }
+   
 
     // Preloader animation
     window.addEventListener('load', function() {
