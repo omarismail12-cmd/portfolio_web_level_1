@@ -455,9 +455,7 @@ section {
  .hid{
   display: none;
  }
- .nav a {
-  display: none;
-}
+ 
  #projects {
   margin: 2rem 1rem;
   }
